@@ -1,0 +1,21 @@
+<html>
+<head>
+
+</head>
+<body>
+<div id="keyimusing">&lt;KEY&gt;</div>
+<div id="chrome-feedback">
+	<script id="threecents" src="http://threecents.elevenbasetwo.com/cdn/threecents.js" data-key=""></script>
+</div>
+
+<script>
+bgPage = chrome.extension.getBackgroundPage();
+threecentspopup = document.getElementById("threecents");
+alert(bgPage.threecentskey);
+
+document.getElementById('keyimusing').innerHTML = "Key:" + bgPage.threecentskey;
+
+threecentspopup.setAttribute("data-key", bgPage.threecentskey);
+</script>
+</body>
+</html>

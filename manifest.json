@@ -1,0 +1,21 @@
+{
+  "name": "3Cents by ElevenBase2",
+  "version": "1.0",
+  "description": "Leave feedback on websites that support 3cents!",
+  "background_page": "background.html",
+  "browser_action": {
+	"default_popup": "popup.html",
+	"default_icon": "threecent.png"
+  },
+  "content_scripts": [
+	{
+		"matches": ["http://*/*", "https://*/*", "file:///*/*"],
+    "js": ["threecentsextension.js"]
+  }],
+  "permissions": [
+	  "tabs",
+      "http://*/*",
+	  "file:///*/*"
+	  
+    ]
+}

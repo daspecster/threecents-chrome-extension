@@ -1,0 +1,13 @@
+<html>
+<head>
+<script type="text/javascript">
+var threecentskey = "";
+chrome.extension.onRequest.addListener(
+    function(request, sender, sendResponse){
+        console.log("background.html has key as: " + request.my_variable);
+		threecentskey = request.my_variable; 
+    }
+);
+  </script>
+</head>
+</html>
